@@ -1,0 +1,26 @@
+#computer will choose a random number 1 - 100
+#user will guess a number, if the number is too high the computer will say,
+#this is repeated until the user gets the right number
+
+import random
+
+N_min = 1
+N_max = 100
+
+random_number = random.randint(N_min, N_max) #generates a random number between 1-100
+i = 0 #initialises counter to track the number of guesses
+nguess = 0 #initialises number of guesses to 0 to start the guessing game
+
+while random_number != nguess: #creates a while loop that continues unitl the player guesses the correct number
+    i+=1 #this makes the guess counter number 1
+    nguess = int(input("Guess a number "))
+    if nguess > random_number: 
+        print("Too high")
+    elif nguess < random_number:
+        print("Too low") 
+    else:
+        pass #breaks the code when guess is correct
+print("Correct! Guessed in ", i ,"attempts") 
+
+#add unit test to this!!
+
